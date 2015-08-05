@@ -1,0 +1,35 @@
+module_mk.hello:
+  title: 'Routing API: Basic Hello World'
+  route_name: module_mk.hello
+  weight: 0
+
+module_mk.hello-adv:
+  title: 'Routing API: Hello World with args'
+  route_name: module_mk.hello-adv
+  route_parameters: {'name':'Mirko', 'surname':'Marraro'}
+  weight: 5
+
+module_mk.hello-config:
+  title: 'Config API: Read yml example'
+  route_name: module_mk.hello-config
+  weight: 10
+
+module_mk.hello-config-install:
+  title: 'Config API: hook_install example'
+  route_name: module_mk.hello-config-install
+  weight: 15
+
+module_mk.hello-config-edit:
+  title: 'Config API: Edit yml file example'
+  route_name: module_mk.hello-config-edit
+  weight: 20
+
+module_mk.hello-form:
+  title: 'Form API: Simple Form'
+  route_name: module_mk.hello-form
+  weight: 25
+
+module_mk.redirect-to:
+  title: 'Form API: Simple Redirect Form'
+  route_name: module_mk.redirect-to
+  weight: 30

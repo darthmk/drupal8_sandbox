@@ -1,0 +1,7 @@
+name: Test Module
+type: module
+description: 'Sandbox test module.'
+package: Test
+core: 8.x
+tags:
+ - test

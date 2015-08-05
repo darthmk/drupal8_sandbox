@@ -1,0 +1,11 @@
+<?php
+/**
+ * Implements hook_install().
+ */
+function module_mk_install() {
+  $user = \Drupal::currentUser();
+  \Drupal::configFactory()->getEditable('module_mk.settings')
+    ->set('identity.name', $user->getUsername())
+    ->set('identity.email', $user->getEmail())
+    ->save();
+}

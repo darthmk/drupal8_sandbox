@@ -1,0 +1,55 @@
+module_mk.hello:
+  path: '/hello'
+  defaults:
+    _controller: '\Drupal\module_mk\Controller\Hello::content'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
+
+module_mk.hello-adv:
+  path: '/hello/{name}/{surname}'
+  defaults:
+    _controller: '\Drupal\module_mk\Controller\Hello::greet'
+    _title: 'Hello World (Greet from url)'
+  requirements:
+    _permission: 'access content'
+
+module_mk.hello-config:
+  path: '/hello-config'
+  defaults:
+    _controller: '\Drupal\module_mk\Controller\Hello::greet_from_config'
+    _title: 'Hello World (Greet from config file)'
+  requirements:
+    _permission: 'access content'
+
+module_mk.hello-config-install:
+  path: '/hello-config-install'
+  defaults:
+    _controller: '\Drupal\module_mk\Controller\Hello::greet_from_config_install'
+    _title: 'Hello World (Greet from config by hook_install)'
+  requirements:
+    _permission: 'access content'
+
+module_mk.hello-config-edit:
+  path: '/hello-config-edit'
+  defaults:
+    _form: '\Drupal\module_mk\Form\EditConfigForm'
+    _title: 'Hello World (Edit config file)'
+  requirements:
+    _permission: 'access content'
+
+module_mk.hello-form:
+  path: '/hello-form'
+  defaults:
+    _form: '\Drupal\module_mk\Form\ExampleForm'
+    _title: 'Hello World Form'
+  requirements:
+    _permission: 'access content'
+
+module_mk.redirect-to:
+  path: '/redirect-to'
+  defaults:
+    _form: '\Drupal\module_mk\Form\RedirectForm'
+    _title: 'Redirect Form'
+  requirements:
+    _permission: 'access content'
